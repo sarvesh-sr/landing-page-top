@@ -1,97 +1,101 @@
 /* Base styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Reset default styles */
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
 }
 
-h1, p {
-    margin: 0;
+h1,
+p {
+  margin: 0;
 }
 
 /* Layout components */
-header {
-    background-color: #1f2937;
-    padding: 20px 12%;
+header,
+.hero {
+  background-color: #1f2937;
+  padding: 20px 12%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero-content {
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 25px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
 }
 
 /* Specific element styles */
 ul a {
-    font-size: 18px;
-    color: #e5e7eb;
+  font-size: 18px;
+  color: #e5e7eb;
 }
 
 .logo {
-    font-size: 24px;
-    color: #f9faf8;
-    font-weight: bold;
+  font-size: 24px;
+  color: #f9faf8;
+  font-weight: bold;
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    color: #f9faf8;
-    font-weight: 900;
+  font-size: 48px;
+  color: #f9faf8;
+  font-weight: 900;
 }
 
 .hero-content p {
-    font-size: 18px;
-    color: #e5e7eb;
+  font-size: 18px;
+  color: #e5e7eb;
 }
 
 img {
-    width: 40%; /* Set width as a percentage of the container */
-    height: auto; /* Let the height adjust automatically */
-    object-fit: contain; /* Ensures the image maintains its aspect ratio */
-    aspect-ratio: 4/3; /* Sets a specific aspect ratio (adjust as needed) */
-    max-width: 100%; /* Ensures image doesn't overflow its container */
+  width: 40%; /* Set width as a percentage of the container */
+  height: auto; /* Let the height adjust automatically */
+  object-fit: contain; /* Ensures the image maintains its aspect ratio */
+  aspect-ratio: 4/3; /* Sets a specific aspect ratio (adjust as needed) */
+  max-width: 100%; /* Ensures image doesn't overflow its container */
 }
 
 /* You can also target just the hero image specifically */
 .hero img {
-    align-self: center; /* Centers the image vertically */
+  align-self: center; /* Centers the image vertically */
 }
 
 button {
-    background-color: #3882f6;
-    width: fit-content;
-    padding: 8px 32px;
-    border: none;
-    color: #f9faf8;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 7px;
-    font-weight: bold;
+  background-color: #3882f6;
+  width: fit-content;
+  padding: 8px 32px;
+  border: none;
+  color: #f9faf8;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 7px;
+  font-weight: bold;
 }

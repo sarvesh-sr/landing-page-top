@@ -1,11 +1,17 @@
-/* Base styles */
+:root {
+  --dark-bg: #1f2937;
+  --light-text: #f9faf8;
+  --secondary-text: #e5e7eb;
+  --accent-blue: #3882f6;
+}
+
+/* Base styles and resets */
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* Reset default styles */
 a {
   text-decoration: none;
   color: white;
@@ -20,14 +26,14 @@ ul {
 }
 
 h1,
+h2,
 p {
   margin: 0;
 }
 
-/* Layout components */
-header,
-.hero {
-  background-color: #1f2937;
+/* Header and navigation */
+header {
+  background-color: var(--dark-bg);
   padding: 20px 12%;
   display: flex;
   justify-content: space-between;
@@ -39,7 +45,21 @@ nav {
   justify-content: space-between;
 }
 
+.logo {
+  font-size: 24px;
+  color: var(--light-text);
+  font-weight: bold;
+}
+
+ul a {
+  font-size: 18px;
+  color: var(--secondary-text);
+}
+
+/* Hero section */
 .hero {
+  background-color: var(--dark-bg);
+  padding: 20px 12%;
   display: flex;
   justify-content: space-between;
 }
@@ -52,50 +72,97 @@ nav {
   gap: 25px;
 }
 
-/* Specific element styles */
-ul a {
-  font-size: 18px;
-  color: #e5e7eb;
-}
-
-.logo {
-  font-size: 24px;
-  color: #f9faf8;
-  font-weight: bold;
-}
-
 .hero-content h1 {
   font-size: 48px;
-  color: #f9faf8;
+  color: var(--light-text);
   font-weight: 900;
 }
 
 .hero-content p {
   font-size: 18px;
-  color: #e5e7eb;
+  color: var(--secondary-text);
 }
 
+/* Images */
 img {
-  width: 40%; /* Set width as a percentage of the container */
-  height: auto; /* Let the height adjust automatically */
-  object-fit: contain; /* Ensures the image maintains its aspect ratio */
-  aspect-ratio: 4/3; /* Sets a specific aspect ratio (adjust as needed) */
-  max-width: 100%; /* Ensures image doesn't overflow its container */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 4/3;
 }
 
-/* You can also target just the hero image specifically */
 .hero img {
-  align-self: center; /* Centers the image vertically */
+  width: 40%;
+  align-self: center;
 }
 
+/* Buttons */
 button {
-  background-color: #3882f6;
+  background-color: var(--accent-blue);
   width: fit-content;
   padding: 8px 32px;
   border: none;
-  color: #f9faf8;
+  color: var(--light-text);
   font-size: 16px;
   cursor: pointer;
   border-radius: 7px;
   font-weight: bold;
+}
+
+/* Info section */
+.info {
+  padding-bottom: 50px;
+}
+
+.info h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--dark-bg);
+  margin: 40px 0;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 27px;
+}
+
+.card {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-self: self-start;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 18px;
+}
+
+.card h2 {
+  font-size: 22px;
+}
+
+/* Card types */
+.grass-type {
+  border-color: green;
+}
+.fire-type {
+  border-color: red;
+}
+.water-type {
+  border-color: blue;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-bg);
+  color: var(--secondary-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
